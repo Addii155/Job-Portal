@@ -7,7 +7,10 @@ import userRoute from "./routes/user.route.js";
 import companyRoute from "./routes/company.route.js";
 import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
-
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.resolve()
 dotenv.config({});
 
 const app = express();
@@ -16,10 +19,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true})); 
 app.use(cookieParser()); 
+app.use(express.static(path.join(__dirname,  "/frontend/dist")));
 const corsOptions = {
     origin:'http://localhost:5173',
     credentials:true
 }
+app.get("*", (_, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
 
 app.use(cors(corsOptions));
 

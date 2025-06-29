@@ -5,11 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon backend/index.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/index.js",
-    "vercel-build": "npm install"
-  },
+  "dev": "nodemon backend/index.js",
+  "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+  "start": "node backend/index.js",
+  "vercel-build": "npm run build"
+},
   "author": "",
   "license": "ISC",
   "dependencies": {

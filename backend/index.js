@@ -28,7 +28,7 @@ app.use(cookieParser());
 
 // Enable CORS (adjust origin as needed)
 const corsOptions = {
-  origin: ["http://localhost:5173","https://jobs-portal-beta.vercel.app"], // Or your frontend origin (e.g., Vercel domain)
+  origin: ["http://localhost:5173","https://jobs-portal-beta.vercel.app","https://job-portal-wudv.onrender.com","http://43.204.116.138"], // Or your frontend origin (e.g., Vercel domain)
   credentials: true,
 };
 app.use(cors(corsOptions));

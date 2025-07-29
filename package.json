@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon backend/index.js",
-    "start": "node backend/index.js",
-    "vercel-build": "npm install"
+    "start": "node backend/index.js"
 },
   "author": "",
   "license": "ISC",
